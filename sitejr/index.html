@@ -8,6 +8,24 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  <!-- Event snippet for Contato conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17995001894/vzUpCLq5qIMcEKbg14RD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
   gtag('config', 'AW-17995001894');
 </script>
   <!-- ================= META BÁSICO =================
@@ -398,4 +416,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
