@@ -1,420 +1,380 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17995001894"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  <!-- Event snippet for Contato conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17995001894/vzUpCLq5qIMcEKbg14RD',
-      'event_callback': callback
-  });
-  return false;
-}
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17995001894');
 </script>
 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark light" />
 
-  gtag('config', 'AW-17995001894');
-</script>
-  <!-- ================= META BÁSICO =================
-    charset: garante acentos corretos (pt-BR)
-    viewport: essencial para responsividade no celular
-    color-scheme: ajuda o navegador a renderizar melhor em dark/light (opcional)
-  =================================================== -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
+<title>JR Moura Auto Center</title>
 
-  <!-- ================= SEO =================
-    title: título que aparece na aba e no Google
-    description: texto que aparece nos resultados do Google (meta descrição)
-  =========================================== -->
-  <title>JR Moura Auto Center</title>
-  <meta
-    name="description"
-    content="JR Moura Auto Center — Diagnóstico preciso, serviço profissional e transparência total."
-  />
+<meta name="description"
+content="JR Moura Auto Center — Diagnóstico preciso, serviço profissional e transparência total."
+/>
 
-  <!-- ================= FONTES =================
-    Montserrat via Google Fonts.
-    Se quiser trocar a fonte: altere este link e depois ajuste no CSS (font-family).
-  ============================================= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
-  />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- ================= CSS PRINCIPAL =================
-    style.css: onde ficam layout, cores, responsividade e ajustes do botão do WhatsApp / carrossel.
-  ===================================================== -->
-  <link rel="stylesheet" href="style.css" />
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+/>
+
+<link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
-  <!-- ================= ACESSIBILIDADE =================
-    "Pular para o conteúdo" ajuda navegação por teclado/leitores de tela.
-    Você pode remover se não quiser, mas é recomendado.
-  ====================================================== -->
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- ================= NAVBAR (TOPO) =================
-    Responsável por:
-    - Logo
-    - Links de navegação (Serviços, Contato)
-    - Botão do WhatsApp no topo (lado do logo)
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    Se quiser alterar o número/mensagem do WhatsApp:
-    - Troque o href do link com class="btn-whatsapp-header"
-  ====================================================== -->
-  <header class="navbar" role="banner">
-    <!-- navbar-inner: container interno para alinhar logo, menu e botão -->
-    <div class="navbar-inner">
+<header class="navbar" role="banner">
 
-      <!-- LOGO:
-        - Se quiser trocar a imagem, altere src
-        - Se quiser mudar o texto alternativo, altere alt
-        - O href="#" leva ao topo; você pode trocar para "index.html" se preferir
-      -->
-      <a class="logo" href="#" aria-label="JR Moura Auto Center - Início">
-        <img src="logo-jr-moura.png" alt="Logo JR Moura Auto Center" />
-      </a>
+<div class="navbar-inner">
 
-      <!-- MENU (NAV):
-        - Links âncora para seções da página
-        - Se mudar o ID da seção, precisa mudar o href aqui também
-      -->
-      <nav class="navbar-nav" aria-label="Navegação principal">
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<a class="logo" href="#" aria-label="JR Moura Auto Center - Início">
+<img src="logo-jr-moura.png" alt="Logo JR Moura Auto Center" />
+</a>
 
-      <!-- AÇÕES NO TOPO:
-        - Botão principal do WhatsApp (fica no header)
-        - Se no celular ele "quebra" ou some, normalmente é CSS (flex + media query)
-      -->
-      <div class="navbar-actions">
-        <a
-          href="https://wa.me/5514996392493?text=Olá%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20gostaria%20de%20um%20orçamento%20para%20meu%20veículo?"
-          class="btn-main btn-whatsapp-header"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Falar no WhatsApp"
-        >
-          WhatsApp
-        </a>
-      </div>
-    </div>
-  </header>
+<nav class="navbar-nav" aria-label="Navegação principal">
+<a href="#servicos">Serviços</a>
+<a href="#whatsapp-contato">Contato</a>
+</nav>
 
-  <!-- ================= CONTEÚDO PRINCIPAL =================
-    main: agrupa o conteúdo da página (bom para SEO e acessibilidade)
-    id="conteudo": usado pelo link "Pular para o conteúdo"
-  =========================================================== -->
-  <main id="conteudo">
+<div class="navbar-actions">
 
-    <!-- ================= HERO (PRIMEIRA DOBRA) =================
-      Seção de impacto inicial:
-      - Título (h1)
-      - Subtexto
-      - CTA (botão) de orçamento via WhatsApp
+<a
+href="https://wa.me/5514996392493?text=Olá,%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20quero%20solicitar%20um%20diagnóstico%20para%20meu%20veículo.%20O%20problema%20é:%20"
+class="btn-main btn-whatsapp-header js-whatsapp-track"
+rel="noopener noreferrer"
+aria-label="Solicitar diagnóstico no WhatsApp"
+>
+Solicitar diagnóstico
+</a>
 
-      Se quiser mudar texto do topo:
-      - altere h1 e p
-
-      Se quiser mudar destino do botão:
-      - altere href do link "Solicitar orçamento"
-    ============================================================ -->
-    <section class="hero" aria-label="Apresentação">
-      <div class="hero-content">
-        <h1>Diagnóstico preciso e solução definitiva para seu carro.</h1>
-        <p>Tecnologia, experiência e confiança em cada reparo.</p>
-
-        <a
-          href="https://wa.me/5514996392493?text=Olá%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20gostaria%20de%20um%20orçamento%20para%20meu%20veículo"
-          class="btn-main"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Solicitar orçamento
-        </a>
-      </div>
-    </section>
-
-    <!-- ================= SERVIÇOS =================
-      Carrossel horizontal com cards.
-      Ajustes de espaçamento no celular normalmente ficam no CSS:
-      - largura dos cards
-      - gap entre cards
-      - padding do container
-    ================================================= -->
-    <section id="servicos" class="services" aria-label="Serviços">
-      <h2>Nossos Serviços</h2>
-
-      <!-- CARROSSEL:
-        - .carousel-container: wrapper + botões
-        - .carousel: trilho com os cards
-        - botões .nav.prev e .nav.next: navegação (geralmente controlada no JS)
-      -->
-      <div class="carousel-container" aria-label="Carrossel de serviços">
-        <button class="nav prev" type="button" aria-label="Anterior">‹</button>
-
-        <!-- LISTA DE CARDS:
-          Se quiser adicionar um serviço:
-          - copie um <article class="service-card"> e cole abaixo
-          - troque imagem, título e texto
-        -->
-        <div class="carousel" role="list">
-
-          <article class="service-card" role="listitem">
-            <img src="injeçãonova.png" alt="Injeção eletrônica" loading="lazy" />
-            <h3>🔧 Injeção Eletrônica</h3>
-            <p>Diagnóstico e reparo preciso.</p>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <img src="suspensão.jpg" alt="Suspensão completa" loading="lazy" />
-            <h3>🛠 Suspensão Completa</h3>
-            <p>Estabilidade e segurança total.</p>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <img src="trocadeoleo.png" alt="Troca de óleo" loading="lazy" />
-            <h3>🛢 Troca de Óleo</h3>
-            <p>Proteção e vida ao motor.</p>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <img src="scanner.jpg" alt="Scanner automotivo" loading="lazy" />
-            <h3>💻 Scanner</h3>
-            <p>Leitura e reset de falhas.</p>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <img src="motor e cambio.jpg" alt="Motor e câmbio" loading="lazy" />
-            <h3>Motor e Cambio</h3>
-            <p>Diagnóstico e reparo completo de motores e câmbios.</p>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <img src="socorro.jpg" alt="Motor automotivo" loading="lazy" />
-            <h3> Socorro</h3>
-            <p>Assistência Automotiva</p>
-          </article>
-
-        </div>
-
-        <button class="nav next" type="button" aria-label="Próximo">›</button>
-      </div>
-    </section>
-
-    <!-- ================= MONTADORAS (CARROSSEL 3D) =================
-      Aqui fica o efeito 3D (brands ring).
-      Problema do "muito separado no celular" normalmente é:
-      - translateZ alto demais
-      - radius grande demais
-      - scale/perspective sem media query
-
-      Eu deixei data-radius-desktop e data-radius-mobile
-      para você (ou o JS) conseguir ajustar com base na tela.
-      Se seu JS não usa isso ainda, a gente adapta no script.js.
-    ================================================================ -->
-    <section class="brands-3d-wrapper" aria-label="Montadoras que trabalhamos">
-      <h2 class="brands-title">Trabalhamos com Nacionais e Importados</h2>
-
-      <!-- STAGE:
-        - normalmente define a perspectiva (CSS)
-        - se tiver muito "espaço" no mobile, ajusta perspective/altura no CSS
-      -->
-      <div class="brands-stage">
-        <!-- RING:
-          - elemento que gira/posiciona as logos em círculo 3D
-          - data-radius-desktop/mobile: sugere raio para telas diferentes
-        -->
-        <div
-          class="brands-ring"
-          id="brandsRing"
-          data-radius-desktop="260"
-          data-radius-mobile="160"
-        >
-          <!-- LOGO 1 -->
-          <div class="brand">
-            <img src="logos/audisf.png" alt="Audi" loading="lazy" />
-          </div>
-
-          <!-- LOGO 2 -->
-          <div class="brand">
-            <img src="logos/chevroletsf-preview.png" alt="Chevrolet" loading="lazy" />
-          </div>
-
-          <!-- LOGO 3 -->
-          <div class="brand">
-            <img src="logos/fiatsf.png" alt="Fiat" loading="lazy" />
-          </div>
-
-          <!-- LOGO 4 -->
-          <div class="brand">
-            <img src="logos/fordsf.png" alt="Ford" loading="lazy" />
-          </div>
-
-          <!-- LOGO 5 -->
-          <div class="brand">
-            <img src="logos/hondasf.png" alt="Honda" loading="lazy" />
-          </div>
-
-          <!-- LOGO 6 -->
-          <div class="brand">
-            <img src="logos/hyundaisf.png" alt="Hyundai" loading="lazy" />
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CONTATO / LOCALIZAÇÃO =================
-      - Texto de cidade
-      - Mapa incorporado (iframe)
-      - Botão para abrir no Google Maps
-      - Botão de WhatsApp no final
-
-    ============================================================ -->
-    <section id="contato" class="contact" aria-label="Contato e localização">
-      <h2>Localização</h2>
-      <p>📍 Botucatu - SP</p>
-
-      <!-- MAPA:
-        - Se mudar endereço, altere o "q=" do src
-        - O iframe deve ficar sozinho para funcionar bem no celular
-      -->
-      <div class="map-container" aria-label="Mapa">
-        <iframe
-          title="Mapa - JR Moura Auto Center"
-          src="https://www.google.com/maps?q=R.+Cap.+Pedro+Amando+de+Barros+187,+Botucatu,+SP,+18600-080&output=embed"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <!-- BOTÃO PARA ABRIR ROTA NO GOOGLE MAPS:
-        - Troque o destination= se mudar o endereço
-      -->
-      <a
-        class="btn-map"
-        href="https://www.google.com/maps/dir/?api=1&destination=R.+Cap.+Pedro+Amando+de+Barros+187,+Botucatu,+SP,18600-080"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Abrir no Google Maps
-      </a>
-
-      <!-- BOTÃO WHATSAPP DO CONTATO:
-        - Pode ter mensagem diferente do WhatsApp do topo e do hero
-        - Se quiser unificar, use o mesmo href em todos
-      -->
-      <a
-        href="https://wa.me/5514996392493?text=Olá%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20gostaria%20de%20um%20orçamento%20para%20meu%20veículo"
-        class="btn-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp
-      </a>
-    </section>
-
-  </main>
-
-  <!-- ================= RODAPÉ =================
-    Texto final do site.
-    Se quiser atualizar ano, altere aqui.
-  ============================================== -->
-  <!-- ================= FOOTER COMPLETO ================= -->
-<footer class="site-footer" id="rodape">
-  <div class="footer-inner">
-    <!-- COLUNA 1: Marca / descrição / rede social -->
-    <div class="footer-col footer-brand">
-      <div class="footer-logo">
-        <!-- Troque pelo seu arquivo -->
-        <img src="logo-jr-moura.png" alt="JR Moura Auto Center">
-      </div>
-
-      <p class="footer-text">
-        Não Arrumamos Carros, Solucionamos Problemas.
-      </p>
-
-      <a class="footer-link" href="https://www.instagram.com/jrmouraautocenter/" target="_blank" rel="noopener noreferrer">
-        Instagram
-      </a>
-    </div>
-
-    <!-- COLUNA 2: Navegação -->
-    <div class="footer-col">
-      <h3 class="footer-title">Navegação</h3>
-      <a class="footer-link" href="#conteudo">Início</a>
-      <a class="footer-link" href="#servicos">Serviços</a>
-      <a class="footer-link" href="#contato">Contato</a>
-    </div>
-
-    <!-- COLUNA 3: Serviços chave + CTA -->
-    <div class="footer-col">
-      <h3 class="footer-title">Serviços Chave</h3>
-      <p class="footer-item">Injeção Eletrônica</p>
-      <p class="footer-item">Suspensão Completa</p>
-      <p class="footer-item">Troca de Óleo</p>
-      <p class="footer-item">Scanner Automotivo</p>
-
-      <a
-        class="footer-cta"
-        href="https://wa.me/5514996392493?text=Olá%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20gostaria%20de%20um%20orçamento%20para%20meu%20veículo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Solicitar Orçamento
-      </a>
-    </div>
-
-    <!-- COLUNA 4: Contato -->
-    <div class="footer-col">
-      <h3 class="footer-title">Contato Direto</h3>
-      <p class="footer-item">JR Moura Auto Center</p>
-      <p class="footer-item">📍 Botucatu - SP</p>
-      <p class="footer-item">📞 (14) 99639-2493</p>
-      <p class="footer-item">Atendimento em horário comercial</p>
-    </div>
-  </div>
-
-  <!-- LINHA DIVISÓRIA -->
-  <div class="footer-divider"></div>
-
-  <!-- FAIXA INFERIOR -->
-<div class="footer-bottom">
-  <p class="footer-copy">© 2026 JR Moura Auto Center. Todos os direitos reservados.</p>
-  <p class="footer-dev">Desenvolvido por @klebeeraalves - Tríade | Agência de Marketing </p>
 </div>
+</div>
+</header>
+
+<main id="conteudo">
+
+<section class="hero" aria-label="Apresentação">
+
+<div class="hero-content">
+
+<h1>Diagnóstico preciso e solução definitiva para seu carro.</h1>
+
+<p>Tecnologia, experiência e confiança em cada reparo.</p>
+
+<a
+href="https://wa.me/5514996392493?text=Olá,%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20quero%20solicitar%20um%20diagnóstico%20para%20meu%20veículo.%20O%20problema%20é:%20"
+class="btn-main js-whatsapp-track"
+rel="noopener noreferrer"
+>
+
+Solicitar diagnóstico no WhatsApp
+
+</a>
+
+</div>
+</section>
+
+<section id="servicos" class="services" aria-label="Serviços">
+
+<h2>Nossos Serviços</h2>
+
+<div class="carousel-container" aria-label="Carrossel de serviços">
+
+<button class="nav prev" type="button" aria-label="Anterior">‹</button>
+
+<div class="carousel" role="list">
+
+<article class="service-card" role="listitem">
+<img src="injeçãonova.png" alt="Injeção eletrônica" loading="lazy" />
+<h3>🔧 Injeção Eletrônica</h3>
+<p>Diagnóstico e reparo preciso.</p>
+</article>
+
+<article class="service-card" role="listitem">
+<img src="suspensão.jpg" alt="Suspensão completa" loading="lazy" />
+<h3>🛠 Suspensão Completa</h3>
+<p>Estabilidade e segurança total.</p>
+</article>
+
+<article class="service-card" role="listitem">
+<img src="trocadeoleo.png" alt="Troca de óleo" loading="lazy" />
+<h3>🛢 Troca de Óleo</h3>
+<p>Proteção e vida ao motor.</p>
+</article>
+
+<article class="service-card" role="listitem">
+<img src="scanner.jpg" alt="Scanner automotivo" loading="lazy" />
+<h3>💻 Scanner</h3>
+<p>Leitura e reset de falhas.</p>
+</article>
+
+<article class="service-card" role="listitem">
+<img src="motor e cambio.jpg" alt="Motor e câmbio" loading="lazy" />
+<h3>Motor e Cambio</h3>
+<p>Diagnóstico e reparo completo de motores e câmbios.</p>
+</article>
+
+<article class="service-card" role="listitem">
+<img src="socorro.jpg" alt="Motor automotivo" loading="lazy" />
+<h3>Socorro</h3>
+<p>Assistência Automotiva</p>
+</article>
+
+</div>
+
+<button class="nav next" type="button" aria-label="Próximo">›</button>
+
+</div>
+</section>
+
+<section class="brands-3d-wrapper" aria-label="Montadoras que trabalhamos">
+
+<h2 class="brands-title">Trabalhamos com Nacionais e Importados</h2>
+
+<div class="brands-stage">
+
+<div
+class="brands-ring"
+id="brandsRing"
+data-radius-desktop="260"
+data-radius-mobile="160"
+>
+
+<div class="brand">
+<img src="logos/audisf.png" alt="Audi" loading="lazy" />
+</div>
+
+<div class="brand">
+<img src="logos/chevroletsf-preview.png" alt="Chevrolet" loading="lazy" />
+</div>
+
+<div class="brand">
+<img src="logos/fiatsf.png" alt="Fiat" loading="lazy" />
+</div>
+
+<div class="brand">
+<img src="logos/fordsf.png" alt="Ford" loading="lazy" />
+</div>
+
+<div class="brand">
+<img src="logos/hondasf.png" alt="Honda" loading="lazy" />
+</div>
+
+<div class="brand">
+<img src="logos/hyundaisf.png" alt="Hyundai" loading="lazy" />
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contato" class="contact" aria-label="Contato e localização">
+
+<h2>Localização</h2>
+<p>📍 Botucatu - SP</p>
+
+<div class="map-container" aria-label="Mapa">
+
+<iframe
+title="Mapa - JR Moura Auto Center"
+src="https://www.google.com/maps?q=R.+Cap.+Pedro+Amando+de+Barros+187,+Botucatu,+SP,+18600-080&output=embed"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
+</div>
+
+<a
+class="btn-map js-maps-track"
+href="https://www.google.com/maps/dir/?api=1&destination=R.+Cap.+Pedro+Amando+de+Barros+187,+Botucatu,+SP,18600-080"
+rel="noopener noreferrer"
+>
+
+Abrir no Google Maps
+
+</a>
+
+<a
+id="whatsapp-contato"
+href="https://wa.me/5514996392493?text=Olá,%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20quero%20fazer%20um%20orçamento%20para%20meu%20veículo.%20Marca/modelo:%20%20Problema:%20"
+class="btn-whatsapp js-whatsapp-track"
+rel="noopener noreferrer"
+>
+
+Pedir orçamento no WhatsApp
+
+</a>
+
+</section>
+</main>
+
+<footer class="site-footer" id="rodape">
+
+<div class="footer-inner">
+
+<div class="footer-col footer-brand">
+
+<div class="footer-logo">
+<img src="logo-jr-moura.png" alt="JR Moura Auto Center">
+</div>
+
+<p class="footer-text">
+Não Arrumamos Carros, Solucionamos Problemas.
+</p>
+
+<a class="footer-link"
+href="https://www.instagram.com/jrmouraautocenter/"
+target="_blank"
+rel="noopener noreferrer">
+Instagram
+</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3 class="footer-title">Navegação</h3>
+
+<a class="footer-link" href="#conteudo">Início</a>
+<a class="footer-link" href="#servicos">Serviços</a>
+<a class="footer-link" href="#whatsapp-contato">Contato</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3 class="footer-title">Serviços Chave</h3>
+
+<p class="footer-item">Injeção Eletrônica</p>
+<p class="footer-item">Suspensão Completa</p>
+<p class="footer-item">Troca de Óleo</p>
+<p class="footer-item">Scanner Automotivo</p>
+
+<a
+class="footer-cta js-whatsapp-track"
+href="https://wa.me/5514996392493?text=Olá,%20vim%20pelo%20site%20da%20JR%20Moura%20Auto%20Center%20e%20quero%20agendar%20uma%20avaliação%20para%20meu%20veículo.%20Marca/modelo:%20%20Serviço%20que%20preciso:%20"
+rel="noopener noreferrer"
+>
+
+Agendar avaliação
+
+</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3 class="footer-title">Contato Direto</h3>
+
+<p class="footer-item">JR Moura Auto Center</p>
+<p class="footer-item">📍 Botucatu - SP</p>
+<p class="footer-item">📞 (14) 99639-2493</p>
+<p class="footer-item">Atendimento em horário comercial</p>
+
+</div>
+
+</div>
+
+<div class="footer-divider"></div>
+
+<div class="footer-bottom">
+
+<p class="footer-copy">
+© 2026 JR Moura Auto Center. Todos os direitos reservados.
+</p>
+
+<p class="footer-dev">
+Desenvolvido por @klebeeraalves - Tríade | Agência de Marketing
+</p>
+
+</div>
+
 </footer>
 
-  <!-- ================= JS =================
-    script.js:
-    - controla o carrossel de serviços (se você implementou)
-    - controla o carrossel 3D (brandsRing)
-    Assim que você mandar o script.js e style.css, eu ajusto
-    o comportamento no mobile certinho.
-  ========================================= -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+(function () {
+
+const WHATSAPP_SEND_TO = 'AW-17995001894/vzUpCLq5qIMcEKbg14RD';
+const MAPS_SEND_TO = 'AW-17995001894/B2xvCJPDxoQcEKbg14RD';
+const FALLBACK_DELAY = 800;
+
+function safeRedirect(url){
+window.location.href = url;
+}
+
+function trackExternalClick(selector, options){
+
+const elements = document.querySelectorAll(selector);
+
+elements.forEach(function(element){
+
+element.addEventListener('click', function(e){
+
+e.preventDefault();
+
+const url = element.href;
+let redirected = false;
+
+function done(){
+if(redirected) return;
+redirected = true;
+safeRedirect(url);
+}
+
+const payload = {
+send_to: options.sendTo,
+event_callback: done
+};
+
+if(options.value !== undefined){
+payload.value = options.value;
+}
+
+if(options.currency){
+payload.currency = options.currency;
+}
+
+if(typeof gtag === 'function'){
+gtag('event','conversion',payload);
+}
+
+setTimeout(done, FALLBACK_DELAY);
+
+});
+
+});
+
+}
+
+trackExternalClick('.js-whatsapp-track',{
+sendTo: WHATSAPP_SEND_TO
+});
+
+trackExternalClick('.js-maps-track',{
+sendTo: MAPS_SEND_TO,
+value:1.0,
+currency:'BRL'
+});
+
+})();
+</script>
+
 </body>
 </html>
-
-
